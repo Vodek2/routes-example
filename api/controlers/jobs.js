@@ -15,7 +15,7 @@ const jobs = {
     },
     getSingleJob:(req, res)=>{
 
-        const id = req.params.prodId
+        const id = req.params.jobId
         return res.status(200).json({
             message:'Get from jobs controler , requested id: '+id
         })

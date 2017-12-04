@@ -7,6 +7,6 @@ router.get('/', jobs.getAllJobs)
 
 router.post('/', jobs.postJobs)
 
-router.get('/:prodId', jobs.getSingleJob)
+router.get('/:jobId', jobs.getSingleJob)
 
 module.exports =router
