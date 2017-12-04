@@ -1,10 +1,9 @@
 const express = require('express')
 const app = express()
 
-const jobsRoutes = require('./api/routes/jobs')
-const usersRoutes = require('./api/routes/users')
+const routes = require('./api/routes/routes')
 
-app.use('/jobs', jobsRoutes)
-app.use('/users', usersRoutes)
+app.use('/jobs', routes.jobs)
+app.use('/users', routes.users)
 
 module.exports = app

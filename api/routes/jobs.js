@@ -1,12 +1,16 @@
 const express = require('express')
 const jobs = require('../controlers/jobs')
-const router = express.Router()
+const jobsRouter = express.Router()
+
+const routeGuard = require('../middlewares/route-guard')
+
+// jobsRouter.use(routeGuard)
 
 
-router.get('/', jobs.getAllJobs)
+jobsRouter.get('/',  jobs.getAllJobs)
 
-router.post('/', jobs.postJobs)
+jobsRouter.post('/', routeGuard, jobs.postJobs)
 
-router.get('/:jobId', jobs.getSingleJob)
+jobsRouter.get('/:jobId', jobs.getSingleJob)
 
-module.exports =router
+module.exports = jobsRouter
