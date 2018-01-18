@@ -3,9 +3,9 @@ const users = [
     {id:1,
     name:'vodek'},
     {id:2,
-    name:'Shan'},
+    name:'Patryk'},
     {id:3,
-    name:'Gyula'}
+    name:'Someone Else'}
     ]
 
 module.exports = users
